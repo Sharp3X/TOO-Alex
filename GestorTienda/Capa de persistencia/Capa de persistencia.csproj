@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDArticulo.cs" />
+    <Compile Include="BDVenta.cs" />
+    <Compile Include="BDDependiente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

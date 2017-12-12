@@ -22,13 +22,13 @@ namespace Modelo_de_dominio
         private DateTime fechaVenta;
         private List<LineaVenta> lineas;
         
-        private string Codigo
+        public string Codigo
         {
             get
             {
                 return this.codigo;
             }
-            set
+            private set
             {
                 this.codigo = value;
             }
