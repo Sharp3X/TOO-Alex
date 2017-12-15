@@ -43,7 +43,7 @@ namespace Capa_de_persistencia
         }
         public bool EliminarArticulo(Articulo pArticulo)
         {
-            if (this.catalogo.ContainsKey(pArticulo.Codigo))
+            if (this.EstaArticulo(pArticulo))
             {
                 this.catalogo.Remove(pArticulo.Codigo);
                 return true;
@@ -70,19 +70,6 @@ namespace Capa_de_persistencia
                 }
             }
             return null;
-        }
-
-        public ICollection<Articulo> ArticulosPorIva(tipoIva pIva)
-        {
-            ICollection<Articulo> articulosIva = null;
-            foreach(Articulo x in this.Catalogo)
-            {
-                if (x.Iva == pIva)
-                {
-                articulosIva.Add(x);
-                }
-            }
-            return articulosIva;
         }
 
     }

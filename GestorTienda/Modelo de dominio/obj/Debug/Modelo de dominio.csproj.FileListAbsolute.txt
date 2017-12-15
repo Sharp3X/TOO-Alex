@@ -1,0 +1,6 @@
+G:\TOO\trabajo TOO\GestorTienda\Modelo de dominio\bin\Debug\Modelo de dominio.dll
+G:\TOO\trabajo TOO\GestorTienda\Modelo de dominio\bin\Debug\Modelo de dominio.pdb
+G:\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.csprojResolveAssemblyReference.cache
+G:\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.csproj.CoreCompileInputs.cache
+G:\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.dll
+G:\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.pdb

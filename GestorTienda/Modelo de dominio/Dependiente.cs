@@ -21,13 +21,13 @@ namespace Modelo_de_dominio
             this.apellidos = apellidos;
             this.ventas = new List<Venta>();
         }
-        private string NSS
+        public string NSS
         {
             get
             {
                 return this.nss;
             }
-            set
+            private set
             {
                 this.nss = value;
             }
