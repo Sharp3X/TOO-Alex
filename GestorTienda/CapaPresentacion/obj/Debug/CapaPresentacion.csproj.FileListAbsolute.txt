@@ -1,0 +1,33 @@
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\LogicaNegocio.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Modelo de dominio.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Capa de persistencia.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\LogicaNegocio.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Modelo de dominio.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Capa de persistencia.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormIntroducir.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormPrincipal.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\LogicaNegocio.dll
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Modelo de dominio.dll
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Capa de persistencia.dll
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\LogicaNegocio.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Modelo de dominio.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\bin\Debug\Capa de persistencia.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormIntroducir.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormPrincipal.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormsDependientes.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
