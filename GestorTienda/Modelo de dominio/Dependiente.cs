@@ -55,14 +55,25 @@ namespace Modelo_de_dominio
             }
         }
 
-        public bool anadirVenta(Venta v)
+        public double Comision
         {
-            if (!ventas.Contains(v))
+            get
             {
-                this.ventas.Add(v);
-                return true;
+                return this.comision;
             }
-            return false;
+
+            set
+            {
+                this.comision = value;
+            }
+        }
+
+        public List<Venta> Ventas
+        {
+            get
+            {
+                return this.ventas;
+            }
         }
 
         public bool Equals(Dependiente other)

@@ -34,7 +34,7 @@ namespace Modelo_de_dominio
             }
         }
 
-        private DateTime FechaVenta
+        public DateTime FechaVenta
         {
             get
             {

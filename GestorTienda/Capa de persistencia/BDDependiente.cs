@@ -25,6 +25,14 @@ namespace Capa_de_persistencia
 
         }
 
+        public ICollection<Dependiente> ListaDependientes
+        {
+            get
+            {
+                return this.listaDependientes.Values;
+            }
+        }
+
         public bool AnadirDependiente(Dependiente pDependiente)
         {
             if (!this.EstaDependiente(pDependiente))
@@ -49,6 +57,22 @@ namespace Capa_de_persistencia
         public bool EstaDependiente(Dependiente pDependiente)
         {
             return this.listaDependientes.ContainsKey(pDependiente.NSS);
+        }
+
+        public Dependiente BuscarDependiente(Dependiente pDependiente)
+        {
+
+                if (this.EstaDependiente(pDependiente))
+                {
+                    foreach (Dependiente x in this.ListaDependientes)
+                    {
+                        if (pDependiente.Equals(x))
+                        {
+                            return x;
+                        }
+                    }
+                }
+                return null;
         }
     }
 }

@@ -57,11 +57,11 @@ namespace Capa_de_persistencia
         {
             return this.catalogo.ContainsKey(pArticulo.Codigo);
         }
-        public Articulo ObtenerArticulo(Articulo pArticulo)
+        public Articulo BuscarArticulo(Articulo pArticulo)
         {
             if (this.EstaArticulo(pArticulo))
             {
-                foreach(Articulo x in this.catalogo.Values)
+                foreach(Articulo x in this.Catalogo)
                 {
                     if (pArticulo.Equals(x))
                     {

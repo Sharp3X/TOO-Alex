@@ -17,7 +17,7 @@ namespace LogicaNegocio
         }
         public Articulo ObtenerInfoArticulo(Articulo pArticulo)//el articulo pasado como parametro es un envoltorio para el codigo(lo unico que nos interesa). como precondicion el codigo de dicho articulo debe existir en la base de datos.
         {
-            return bd.ObtenerArticulo(pArticulo);
+            return bd.BuscarArticulo(pArticulo);
         }
 
         public bool DarAltaArticulo(Articulo pArticulo)//el articulo parametro no debe estar previamente en nuestra bd.
@@ -38,7 +38,7 @@ namespace LogicaNegocio
         public List<Articulo> ArticulosPorIva(tipoIva pIva)//el iva debe ser un valor valido en nuestro sistema. devuelve una lista de articulos a los que se les aplica dicho iva.
         {
 
-            ICollection<Articulo> listaIva = new List<Articulo>();
+            List<Articulo> listaIva = new List<Articulo>();
             foreach (Articulo x in this.bd.Catalogo)
             {
                 if (x.Iva == pIva)
@@ -46,7 +46,7 @@ namespace LogicaNegocio
                     listaIva.Add(x);
                 }
             }
-            return (List<Articulo>)listaIva;
+            return listaIva;
         }
     }
 }
