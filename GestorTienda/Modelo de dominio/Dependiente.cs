@@ -32,24 +32,24 @@ namespace Modelo_de_dominio
                 this.nss = value;
             }
         }
-        private string Nombre
+        public string Nombre
         {
             get
             {
                 return this.nombre;
             }
-            set
+            private set
             {
                 this.nombre = value;
             }
         }
-        private string Apellidos
+        public string Apellidos
         {
             get
             {
                 return this.apellidos;
             }
-            set
+            private set
             {
                 this.apellidos = value;
             }

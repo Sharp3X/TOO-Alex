@@ -1,0 +1,14 @@
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Capa de persistencia.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Capa de persistencia.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Modelo de dominio.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Modelo de dominio.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.csprojResolveAssemblyReference.cache
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Capa de persistencia.dll
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Capa de persistencia.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Modelo de dominio.dll
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Modelo de dominio.pdb
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.csprojResolveAssemblyReference.cache
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.dll
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.pdb

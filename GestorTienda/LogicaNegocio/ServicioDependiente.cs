@@ -9,7 +9,7 @@ using Capa_de_persistencia;
 
 namespace LogicaNegocio
 {
-    class ServicioDependiente
+    public class ServicioDependiente
     {
         private BDDependiente bd;
         public ServicioDependiente()//el constructor crea una conexion con la base de datos.
