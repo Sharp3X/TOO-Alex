@@ -35,3 +35,23 @@ E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPrese
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDependientes.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormArticulos.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\LogicaNegocio.dll
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\Modelo de dominio.dll
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\Capa de persistencia.dll
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\LogicaNegocio.pdb
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\Modelo de dominio.pdb
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\bin\Debug\Capa de persistencia.pdb
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormArticulos.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormIntroducir.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormPrincipal.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDependientes.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

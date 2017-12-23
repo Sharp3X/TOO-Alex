@@ -12,3 +12,11 @@ E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\bin\Debug\Model
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.csprojResolveAssemblyReference.cache
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.dll
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.pdb
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\bin\Debug\Capa de persistencia.dll
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\bin\Debug\Capa de persistencia.pdb
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\bin\Debug\Modelo de dominio.dll
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\bin\Debug\Modelo de dominio.pdb
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.csprojResolveAssemblyReference.cache
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.csproj.CoreCompileInputs.cache
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.dll
+E:\Programs\sourcetree\GestorTienda\Capa de persistencia\obj\Debug\Capa de persistencia.pdb

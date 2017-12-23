@@ -461,8 +461,15 @@ namespace CapaPresentacion
                             }
                             if (dr3 == DialogResult.OK)
                             {
-                                //Aquí comprobaremos que el dependiente ya existe y que hemos añadido al menos un articulo a la venta
-
+                                //Aquí comprobaremos que el dependiente ya existe y que hemos añadido al menos un articulo a la venta, tranqui que ya lo hace papi
+                                Dependiente daux = new Dependiente(fv.textBox3.Text, null, null);
+                                Dependiente d = sd.ObtenerInfoDependiente(daux);
+                                if (d != null)
+                                {
+                                    sd.AnadirVentaADependiente(v, d);
+                                    sv.DarAltaVenta(v);
+                                    
+                                }
 
 
                                 

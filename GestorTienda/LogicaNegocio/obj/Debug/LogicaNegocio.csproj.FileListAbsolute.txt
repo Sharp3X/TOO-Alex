@@ -16,3 +16,13 @@ E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\LogicaNegocio\bin\Debug\Modelo de do
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\bin\Debug\Capa de persistencia.dll
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\bin\Debug\Modelo de dominio.dll
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\bin\Debug\Capa de persistencia.pdb
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\bin\Debug\Modelo de dominio.pdb
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CoreCompileInputs.cache
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+E:\Programs\sourcetree\GestorTienda\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

@@ -34,6 +34,19 @@ namespace Modelo_de_dominio
             }
         }
 
+        public List<LineaVenta> Lineas
+        {
+            get
+            {
+                return this.lineas;
+            }
+
+            set
+            {
+                this.lineas = value;
+            }
+        }
+
         public DateTime FechaVenta
         {
             get

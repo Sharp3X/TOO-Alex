@@ -23,5 +23,10 @@ namespace Modelo_de_dominio
                 return this.articulo.PrecioVenta * cantidad;
             }
         }
+
+        public string ToString()
+        {
+            return (this.articulo.Codigo + " * " + this.cantidad);
+        }
     }
 }
