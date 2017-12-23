@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class FormsDependientes : Form
+    public partial class FormVentas : Form
     {
-        public FormsDependientes()
+        public FormVentas()
         {
             InitializeComponent();
+            
+        }
+
+        public FormVentas(String cadena)
+        {
+            InitializeComponent();
+            this.Text = cadena + this.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,6 +32,18 @@ namespace CapaPresentacion
         private void button2_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkBox1.Checked)
+            {
+                this.textBox4.ReadOnly = false;
+            }
+            else
+            {
+                this.textBox4.ReadOnly = true;
+            }
         }
     }
 }

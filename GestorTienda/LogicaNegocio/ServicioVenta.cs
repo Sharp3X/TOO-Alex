@@ -8,7 +8,7 @@ using Modelo_de_dominio;
 
 namespace LogicaNegocio
 {
-    class ServicioVenta
+    public class ServicioVenta
     {
         private BDVenta bd;
         public ServicioVenta()//el constructor crea una conexion con la base de datos.

@@ -9,3 +9,8 @@ F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\bin\Debug\Modelo d
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.csprojResolveAssemblyReference.cache
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.dll
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\bin\Debug\Modelo de dominio.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\bin\Debug\Modelo de dominio.pdb
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.csprojResolveAssemblyReference.cache
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.dll
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\Modelo de dominio\obj\Debug\Modelo de dominio.pdb

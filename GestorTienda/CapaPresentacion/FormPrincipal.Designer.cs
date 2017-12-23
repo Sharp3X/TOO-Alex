@@ -69,20 +69,21 @@
             // altaToolStripMenuItem
             // 
             this.altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            this.altaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.altaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.altaToolStripMenuItem.Text = "Alta";
             this.altaToolStripMenuItem.Click += new System.EventHandler(this.altaToolStripMenuItem_Click);
             // 
             // bajaToolStripMenuItem
             // 
             this.bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
-            this.bajaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bajaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.bajaToolStripMenuItem.Text = "Baja";
+            this.bajaToolStripMenuItem.Click += new System.EventHandler(this.bajaToolStripMenuItem_Click);
             // 
             // búsquedaToolStripMenuItem
             // 
             this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
-            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.búsquedaToolStripMenuItem.Text = "Búsqueda";
             this.búsquedaToolStripMenuItem.Click += new System.EventHandler(this.búsquedaToolStripMenuItem_Click);
             // 
@@ -101,12 +102,14 @@
             this.altaToolStripMenuItem1.Name = "altaToolStripMenuItem1";
             this.altaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.altaToolStripMenuItem1.Text = "Alta";
+            this.altaToolStripMenuItem1.Click += new System.EventHandler(this.altaToolStripMenuItem1_Click);
             // 
             // bajaToolStripMenuItem1
             // 
             this.bajaToolStripMenuItem1.Name = "bajaToolStripMenuItem1";
             this.bajaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.bajaToolStripMenuItem1.Text = "Baja";
+            this.bajaToolStripMenuItem1.Click += new System.EventHandler(this.bajaToolStripMenuItem1_Click);
             // 
             // búsquedaToolStripMenuItem1
             // 
@@ -130,17 +133,18 @@
             this.altaToolStripMenuItem2.Name = "altaToolStripMenuItem2";
             this.altaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.altaToolStripMenuItem2.Text = "Alta";
+            this.altaToolStripMenuItem2.Click += new System.EventHandler(this.altaToolStripMenuItem2_Click);
             // 
             // bajaToolStripMenuItem2
             // 
             this.bajaToolStripMenuItem2.Name = "bajaToolStripMenuItem2";
-            this.bajaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.bajaToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.bajaToolStripMenuItem2.Text = "Baja";
             // 
             // búsquedaToolStripMenuItem2
             // 
             this.búsquedaToolStripMenuItem2.Name = "búsquedaToolStripMenuItem2";
-            this.búsquedaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.búsquedaToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.búsquedaToolStripMenuItem2.Text = "Búsqueda";
             // 
             // FormPrincipal
