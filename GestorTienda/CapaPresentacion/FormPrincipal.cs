@@ -14,9 +14,9 @@ namespace CapaPresentacion
 {
     public partial class FormPrincipal : Form
     {
-        ServicioArticulo sa;
-        ServicioDependiente sd;
-        ServicioVenta sv;
+        private ServicioArticulo sa;
+        private ServicioDependiente sd;
+        private ServicioVenta sv;
 
         public FormPrincipal()
         {
@@ -442,7 +442,7 @@ namespace CapaPresentacion
                     else //le dejaremos crear una al no haber ninguno aun
                     {
                         fi.Dispose();
-                        FormVentas fv = new FormVentas("Alta");
+                        FormVentas fv = new FormVentas("Alta",sa,sv);
                         fv.textBox1.Text = vaux.Codigo; //nss que hemos buscado que no existía
                         fv.textBox2.Text = vaux.FechaVenta.ToString();
                         DialogResult dr3 = fv.ShowDialog();
@@ -454,7 +454,7 @@ namespace CapaPresentacion
                             while ((fv.textBox3.Text == "" ) & dr3 == DialogResult.OK)
                             {
                                 fv.Dispose();
-                                fv = new FormVentas("Alta");
+                                fv = new FormVentas("Alta",sa,sv);
                                 fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                                 fv.textBox2.Text = vaux.FechaVenta.ToString();
                                 dr3 = fv.ShowDialog();

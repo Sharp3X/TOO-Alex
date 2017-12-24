@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAniadirLinea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAniadirLinea.Designer.cs">
+      <DependentUpon>FormAniadirLinea.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAniadirLinea.resx">
+      <DependentUpon>FormAniadirLinea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormArticulos.resx">
       <DependentUpon>FormArticulos.cs</DependentUpon>
     </EmbeddedResource>
