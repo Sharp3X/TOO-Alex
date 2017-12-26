@@ -27,14 +27,20 @@ namespace CapaPresentacion
         }
 
         //Métodos correspondientes a los botones de Dependiente
+
+        //Método alta de un Dependiente
+        //Comentaremos este primer método con más detalle, y los siguientes seguirán un patrón similar, con lo que contendrán menos anotaciones
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Creamos un formulario para que introduzca el nss y esperamos si acepta o le da a cancelar
             FormIntroducir fi = new FormIntroducir("NºSS");
             fi.ShowDialog();
             DialogResult dr = fi.DialogResult;
 
+            //En el caso de que acepte continuamos
             if (dr == DialogResult.OK)
             {
+                //Comprobamos que no ha introducido un nss vacío y que siga haciendo click en aceptar
                 while (fi.textBox1.Text == "" & dr==DialogResult.OK)
                 {
                     DialogResult drDelay = MessageBox.Show(this, "Debe introducir un nss para el nuevo Dependiente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -42,44 +48,55 @@ namespace CapaPresentacion
                     fi = new FormIntroducir("NºSS");
                     dr = fi.ShowDialog();
                 }
+                //Si ha salido del bucle porque ha introducido un nss, vendrá aquí
                 if (dr == DialogResult.OK)
                 {
+                    //Construimos un Dependiente auxiliar que hará de envoltorio del nss (ya que nuestra búsqueda de dependiente necesita de un dependiente)
                     Dependiente daux = new Dependiente(fi.textBox1.Text, null, null);
+                    //Si ese dependiente ya existía, nos lo devolverá en "d", en caso contrario, en "d" tendremos un null
                     Dependiente d = sd.ObtenerInfoDependiente(daux);
+                    //Si ese dependiente existía:
                     if (d != null)
                     {
+                        //Le daremos la posibilidad de introducir otro
                         DialogResult dr2 = MessageBox.Show(this, "¿Quieres introducir otro?", "Ya existe un dependiente con ese NºSS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        //Si clicka en sí, reiniciaremos el proceso de dar de alta un dependiente, previamente destruyendo el formulario de introducir datos
                         if (dr2 == DialogResult.Yes)
                         {
                             fi.Dispose();
                             this.altaToolStripMenuItem.PerformClick();
                         }
+                        //Si clicka en no, lo destruirá
                         else
                         {
                             fi.Dispose();
                         }
                     }
-                    else //le dejaremos crear uno al no haber ninguno aun
+                    //Si no existía, le dejaremos crear uno al no haber ninguno aun
+                    else
                     {
+                        //Destruimos el formulario de introducción
                         fi.Dispose();
+                        //Creamos uno nuevo para la creación de un dependiente
                         FormDependientes fd = new FormDependientes("Alta");
+                        //Retiramos botones sobrantes
                         fd.label4.Dispose();
                         fd.textBox4.Dispose();
+                        //Escribimos en el casillero del nss, que es de tipo solo lectura, el nss que nos ha introducido antes
                         fd.textBox1.Text = daux.NSS; //nss que hemos buscado que no existía
+                        //Y esperamos
                         DialogResult dr3 = fd.ShowDialog();
+                        //Si clicka en aceptar:
                         if (dr3 == DialogResult.OK)
                         {
-                            //hacer que vuelva a dejar meter datos
+                            //Checkeamos que ha introducido datos en los campos y que sigue pulsando en aceptar
                             while ((fd.textBox2.Text == "" | fd.textBox3.Text == "") & dr3 == DialogResult.OK)
                             {
+                                //Muestra un error, y vuelve a esperar a que se pulse un botón
                                 DialogResult drDelay = MessageBox.Show(this, "Debe introducir un nombre y unos apellidos para el dependiente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                fd.Dispose();
-                                fd = new FormDependientes("Alta");
-                                fd.label4.Dispose();
-                                fd.textBox4.Dispose();
-                                fd.textBox1.Text = daux.NSS; //nss que hemos buscado que no existía
                                 dr3 = fd.ShowDialog();
                             }
+                            //Si ha escrito en los campos y sigue pulsando en aceptar, recoge el texto de los campos y da de alta el dependiente
                             if (dr3 == DialogResult.OK)
                             {
                                 String nombre = fd.textBox2.Text;
@@ -87,19 +104,22 @@ namespace CapaPresentacion
                                 sd.DarAltaDependiente(new Dependiente(daux.NSS, nombre, apellidos));
                             }
                         }
+                        //Si clicka en aceptar, destruirá el formulario y volverá al menú principal
                         else
                         {
                             fd.Dispose();
                         }
                     }
+                    //En caso de que haya clickado en cancelar, vendrá aquí
                 }
-            }     
+            } 
+            //En cualquier caso, destruimos el formulario de introducción de datos    
             fi.Dispose();
             
        }
 
         
-
+        //Método búsqueda de un dependiente
         private void búsquedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormIntroducir fi = new FormIntroducir("NºSS");
@@ -109,6 +129,8 @@ namespace CapaPresentacion
             {
                 Dependiente daux = new Dependiente(fi.textBox1.Text, null, null);
                 Dependiente d = sd.ObtenerInfoDependiente(daux);
+                //Si existe el dependiente, lo mostrará en un formulario de lectura
+                //Si no, permitirá introducir otro nss
                 if (d == null)
                 {
                     DialogResult dr2=MessageBox.Show(this, "¿Quieres introducir otro dato?", "No existe un dependiente con ese NºSS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -124,6 +146,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
+                    //Muestra el dependiente en formato de solo lectura
                     FormDependientes fd = new FormDependientes("Búsqueda");
                     fd.button2.Dispose();
                     fd.button1.Location= new System.Drawing.Point(108, 232); //movemos el boton aceptar
@@ -145,7 +168,7 @@ namespace CapaPresentacion
 
 
 
-
+        //Método baja de un dependiente
         private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormIntroducir fi = new FormIntroducir("NºSS");
@@ -155,7 +178,8 @@ namespace CapaPresentacion
             {
                 Dependiente daux = new Dependiente(fi.textBox1.Text, null, null);
                 Dependiente d = sd.ObtenerInfoDependiente(daux);
-                if (d == null) //No está
+                //Si el dependiente que queremos dar de baja no está, permitiremos introducir otro
+                if (d == null) 
                 {
                     DialogResult dr2 = MessageBox.Show(this, "¿Quieres introducir otro?", "No existe un dependiente con ese NºSS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr2 == DialogResult.Yes)
@@ -168,7 +192,7 @@ namespace CapaPresentacion
                         fi.Dispose();
                     }
                 }
-                else //le enseñamos los datos y le damos la opcion de dar de baja
+                else //Si está, le enseñamos los datos y le damos la opcion de dar de baja
                 {
                     fi.Dispose();
                     FormDependientes fd = new FormDependientes("Baja");                    
@@ -183,14 +207,18 @@ namespace CapaPresentacion
                     fd.button1.Text = "Dar baja";
 
                     DialogResult dr3 = fd.ShowDialog();
+                    //si acepta darlo de baja
                     if (dr3 == DialogResult.OK)
                     {
+                        //Le mostramos un aviso
                         DialogResult dr4 = MessageBox.Show(this, "¿Está seguro que desea dar de baja al dependiente?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        //En caso afirmativo se borra
                         if (dr4 == DialogResult.Yes)
                         {
                             sd.DarBajaDependiente(d);
                             MessageBox.Show(this, "Dependiente eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
+                        //En caso negativo se vuelve al principal
                         else
                         {
                             fd.Dispose();
@@ -208,6 +236,8 @@ namespace CapaPresentacion
 
         //Métodos correspondientes a los botones de Artículos
 
+        //Método dar de alta un artículo
+        //Misma estructura que dar de alta dependiente
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormIntroducir fi = new FormIntroducir("Código");
@@ -218,15 +248,15 @@ namespace CapaPresentacion
             {
                 while (fi.textBox1.Text == "" & dr == DialogResult.OK)
                 {
+                    //Si no se ha introducido un código
                     DialogResult drDelay = MessageBox.Show(this, "Debe introducir un código para el nuevo Articulo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    fi.Dispose();
-                    fi = new FormIntroducir("Código");
                     dr = fi.ShowDialog();
                 }
                 if (dr == DialogResult.OK)
                 {
                     Articulo aaux= new Articulo(fi.textBox1.Text, tipoIva.normal, 0);
                     Articulo a = sa.ObtenerInfoArticulo(aaux);
+                    //Si existe ya el artículo
                     if (a != null)
                     {
                         DialogResult dr2 = MessageBox.Show(this, "¿Quieres introducir otro?", "Ya existe un artículo con ese código", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -240,22 +270,23 @@ namespace CapaPresentacion
                             fi.Dispose();
                         }
                     }
-                    else //le dejaremos crear uno al no haber ninguno aun
+                    //Si no existe, le dejaremos crear uno al no haber ninguno aun
+                    else
                     {
                         fi.Dispose();
                         FormArticulos fa = new FormArticulos("Alta");
-                        fa.textBox1.Text = aaux.Codigo; //nss que hemos buscado que no existía
+                        fa.textBox1.Text = aaux.Codigo; //código que hemos comprobado que aún no existía
                         DialogResult dr3 = fa.ShowDialog();
 
 
                         if (dr3 == DialogResult.OK)
                         {
                             //hacer que vuelva a dejar meter datos
-                            while ((fa.textBox2.Text == "" | fa.textBox3.Text == "") & dr3 == DialogResult.OK)
+                            while ((fa.textBox2.Text == "" | fa.textBox3.Text == "") & (dr3 == DialogResult.OK | dr3 == DialogResult.Abort)) ///PROBLEMA AQUI SI METO SOLO DESCRIPCION Y LUEGO SOLO PRECIO
                             {
-                                fa.Dispose();
-                                fa = new FormArticulos("Alta");
-                                fa.textBox1.Text = aaux.Codigo; //codigo que hemos buscado que no existía
+                                //En este caso, las validaciones las realizamos desde el mismo formulario articulos
+                                MessageBox.Show(this, "Debe introducir una descripción y un precio de coste válidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                                 dr3 = fa.ShowDialog();
                             }
                             if (dr3 == DialogResult.OK)

@@ -34,7 +34,6 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show(this, "Debe introducir un Precio de Coste válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.DialogResult = DialogResult.Abort;
             }
         }
