@@ -56,3 +56,4 @@ E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.
 E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormAniadirLinea.resources
+E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormAniadirLinea.resources

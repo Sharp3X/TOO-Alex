@@ -30,6 +30,7 @@ namespace CapaPresentacion
             InitializeComponent();
             this.Text = cadena + this.Text;
             this.sa = sa;
+            this.sv = sv;
             this.v = new VentaContado(cadena, null);
 
         }
@@ -65,10 +66,21 @@ namespace CapaPresentacion
             if (dr == DialogResult.OK)
             {
                 //Añado a la venta base, que empieza como vacia (v) un articulo, el cual busco en nuestro servicio articulos.
+                sv.DarAltaVenta(v);
                 //Para ello necesito construir un articulo envoltorio del codigo
+                
                 if (sa.ObtenerInfoArticulo(new Articulo(fal.textBox1.Text, tipoIva.normal, 0)) != null) //Si el articulo esta en nuestra base de datos
                 {
-                    sv.AnadirLineaVenta(v, sa.ObtenerInfoArticulo(new Articulo(fal.textBox1.Text, tipoIva.normal, 0)), int.Parse(fal.textBox2.Text));
+                    string codigoArticulo = fal.textBox1.Text;
+                    int numeroArticulos = int.Parse(fal.textBox2.Text);
+                    sv.AnadirLineaVenta(v, sa.ObtenerInfoArticulo(new Articulo(codigoArticulo, tipoIva.normal, 0)), numeroArticulos);
+                    this.listBox1.Items.Clear();
+                    foreach(LineaVenta l in v.Lineas)
+                    {
+                        this.listBox1.Items.Add(new Label().Text=l.ToString());
+                    }
+                    
+                    
                     // En esta instruccion hay que añadir la linea de venta en concreto, porque no se puede hacer un .items= a algo    --  (Prueba) listBox1.Items.Add("Hola");
                 }
                 else

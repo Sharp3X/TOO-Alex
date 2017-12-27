@@ -48,7 +48,7 @@ namespace CapaPresentacion
         private bool validacion()
         {
             Double precioCoste;
-            if (!Double.TryParse(this.textBox3.Text, out precioCoste) | precioCoste < 0)
+            if (!Double.TryParse(this.textBox3.Text, out precioCoste) | precioCoste <= 0)
             {
                 return false;
 
@@ -57,6 +57,11 @@ namespace CapaPresentacion
             {
                 return true;
             }
+        }
+
+        private void FormArticulos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

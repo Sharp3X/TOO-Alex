@@ -474,7 +474,7 @@ namespace CapaPresentacion
                     {
                         fi.Dispose();
                         FormVentas fv = new FormVentas("Alta",sa,sv);
-                        fv.textBox1.Text = vaux.Codigo; //nss que hemos buscado que no existía
+                        fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                         fv.textBox2.Text = vaux.FechaVenta.ToString();
                         DialogResult dr3 = fv.ShowDialog();
 
@@ -492,11 +492,12 @@ namespace CapaPresentacion
                             }
                             if (dr3 == DialogResult.OK)
                             {
-                                //Aquí comprobaremos que el dependiente ya existe y que hemos añadido al menos un articulo a la venta, tranqui que ya lo hace papi
+                                //Aquí comprobaremos que el dependiente ya existe y que hemos añadido al menos un articulo a la venta
                                 Dependiente daux = new Dependiente(fv.textBox3.Text, null, null);
                                 Dependiente d = sd.ObtenerInfoDependiente(daux);
-                                if (d != null)
+                                if (d != null & fv.listBox1.Items.Count>0)
                                 {
+                                   //hay que instanciar v en el principal, sino es nulo y se quejará.
                                     sd.AnadirVentaADependiente(v, d);
                                     sv.DarAltaVenta(v);
                                     
@@ -517,6 +518,11 @@ namespace CapaPresentacion
                 }
             }
             fi.Dispose();
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

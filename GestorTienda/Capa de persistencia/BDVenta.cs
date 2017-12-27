@@ -33,7 +33,7 @@ namespace Capa_de_persistencia
             }
         }
 
-        public bool AnadirVenta(Venta pVenta)//como precondicion la venta debe ser una venta bien construida, debe ser una venta que se quiera añadir al sistema; ademas al anñadir una venta se debe llamar al metodo AnadirVentaADependiente con esa veta y el dependiente(auxiliar que envuelve un codigo de dependiente real) al que está relacionado
+        public bool AnadirVenta(Venta pVenta)//como precondicion la venta debe ser una venta bien construida, debe ser una venta que se quiera añadir al sistema; ademas al anñadir una venta se debe llamar al metodo AnadirVentaADependiente con esa venta y el dependiente(auxiliar que envuelve un codigo de dependiente real) al que está relacionado
         {
             if (!this.EstaVenta(pVenta))
             {
