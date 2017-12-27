@@ -26,7 +26,7 @@ namespace Modelo_de_dominio
 
         public string ToString()
         {
-            return (this.articulo.Codigo + " x " + this.cantidad);
+            return (this.articulo.ToString() + " x " + this.cantidad);
         }
     }
 }

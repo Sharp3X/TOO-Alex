@@ -25,18 +25,25 @@ namespace CapaPresentacion
             
         }
 
-        public FormVentas(String cadena, ServicioArticulo sa,ServicioVenta sv)
+        public FormVentas(String cadena, String codigo ,ServicioArticulo sa,ServicioVenta sv)
         {
             InitializeComponent();
             this.Text = cadena + this.Text;
             this.sa = sa;
             this.sv = sv;
-            this.v = new VentaContado(cadena, null);
+            this.v = new VentaContado(codigo, null);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (this.checkBox1.Checked == true)
+            {
+                VentaTarjeta vaux =(VentaTarjeta) this.v;
+                vaux.NumTarjeta = this.textBox4.Text;
+                
+            }
+            this.sv.DarAltaVenta(v);
             this.DialogResult = DialogResult.OK;
         }
 
@@ -50,11 +57,21 @@ namespace CapaPresentacion
             if (this.checkBox1.Checked)
             {
                 this.textBox4.ReadOnly = false;
+                Venta vn = new VentaTarjeta("",this.v.Codigo, this.v.Dependiente);
+                vn.Lineas = v.Lineas;
+                sv.DarBajaVenta(v);
+                this.v = vn;
+                sv.DarAltaVenta(v);
             }
             else
             {
                 this.textBox4.ReadOnly = true;
                 this.textBox4.Text = "";
+                Venta vn = new VentaContado(this.v.Codigo, this.v.Dependiente);
+                vn.Lineas = v.Lineas;
+                sv.DarBajaVenta(v);
+                this.v = vn;
+                sv.DarAltaVenta(v);
             }
         }
 
@@ -100,6 +117,11 @@ namespace CapaPresentacion
             else {
                 fal.Dispose();
             }
+        }
+
+        private void FormVentas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

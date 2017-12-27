@@ -14,12 +14,20 @@ namespace Modelo_de_dominio
             this.numTarjeta = numTarjeta;
         }
 
-        private string NumTarjeta
+        public string NumTarjeta
         {
             get
             {
                 return this.numTarjeta;
             }
+            set
+            {
+                this.numTarjeta = value;
+            }
+        }
+        public string ToString()
+        {
+            return (base.ToString() + " numeroTarjeta: " + this.NumTarjeta);
         }
     }
 }

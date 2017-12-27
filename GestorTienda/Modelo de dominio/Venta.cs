@@ -34,6 +34,18 @@ namespace Modelo_de_dominio
             }
         }
 
+        public Dependiente Dependiente
+        {
+            get
+            {
+                return this.dependiente;
+            }
+            set
+            {
+                this.dependiente = value;
+            }
+        }
+
         public List<LineaVenta> Lineas
         {
             get
@@ -68,6 +80,11 @@ namespace Modelo_de_dominio
                 }
                 return i;
             }
+        }
+
+        public string ToString()
+        {
+            return ("codigo: " + this.Codigo + " Dependiente(  " + this.Dependiente.ToString() + ") Fecha: " + this.FechaVenta + " lineas: " + this.Lineas.ToString());
         }
 
         public bool Equals(Venta other)

@@ -10,6 +10,11 @@ namespace Modelo_de_dominio
     {
         public VentaContado(string codigo, Dependiente dependiente) : base(codigo, dependiente)
         {
+         
+        }
+        public string ToString()
+        {
+            return (base.ToString());
         }
     }
 }

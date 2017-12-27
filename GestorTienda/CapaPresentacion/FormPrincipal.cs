@@ -286,7 +286,6 @@ namespace CapaPresentacion
                             {
                                 //En este caso, las validaciones las realizamos desde el mismo formulario articulos
                                 MessageBox.Show(this, "Debe introducir una descripción y un precio de coste válidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                                 dr3 = fa.ShowDialog();
                             }
                             if (dr3 == DialogResult.OK)
@@ -438,6 +437,7 @@ namespace CapaPresentacion
             fi.Dispose();
         }
 
+        //metodos venta
         private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             FormIntroducir fi = new FormIntroducir("Código");
@@ -473,7 +473,7 @@ namespace CapaPresentacion
                     else //le dejaremos crear una al no haber ninguno aun
                     {
                         fi.Dispose();
-                        FormVentas fv = new FormVentas("Alta",sa,sv);
+                        FormVentas fv = new FormVentas("Alta",vaux.Codigo, sa,sv);
                         fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                         fv.textBox2.Text = vaux.FechaVenta.ToString();
                         DialogResult dr3 = fv.ShowDialog();
@@ -485,7 +485,7 @@ namespace CapaPresentacion
                             while ((fv.textBox3.Text == "" ) & dr3 == DialogResult.OK)
                             {
                                 fv.Dispose();
-                                fv = new FormVentas("Alta",sa,sv);
+                                fv = new FormVentas("Alta", vaux.Codigo,sa,sv);
                                 fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                                 fv.textBox2.Text = vaux.FechaVenta.ToString();
                                 dr3 = fv.ShowDialog();
@@ -497,10 +497,9 @@ namespace CapaPresentacion
                                 Dependiente d = sd.ObtenerInfoDependiente(daux);
                                 if (d != null & fv.listBox1.Items.Count>0)
                                 {
-                                   //hay que instanciar v en el principal, sino es nulo y se quejará.
-                                    sd.AnadirVentaADependiente(v, d);
-                                    sv.DarAltaVenta(v);
-                                    
+                                    Venta vBuena = sv.ObtenerInfoVenta(new VentaContado(fv.textBox1.Text, null));
+                                    vBuena.Dependiente = d;
+                                    sd.AnadirVentaADependiente(vBuena, d);
                                 }
 
 

@@ -57,6 +57,11 @@ namespace Modelo_de_dominio
             }
         }
 
+        public string ToString()
+        {
+            return ("codigo: " + this.Codigo + " precio: " + this.PrecioVenta);
+        }
+
         public bool Equals(Articulo other)
         {
             return (this.codigo == other.codigo);           
