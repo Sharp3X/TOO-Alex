@@ -58,10 +58,5 @@ namespace CapaPresentacion
                 return true;
             }
         }
-
-        private void FormArticulos_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

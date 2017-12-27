@@ -41,7 +41,7 @@ namespace CapaPresentacion
             if (dr == DialogResult.OK)
             {
                 //Comprobamos que no ha introducido un nss vacío y que siga haciendo click en aceptar
-                while (fi.textBox1.Text == "" & dr==DialogResult.OK)
+                while (fi.textBox1.Text == "" & dr == DialogResult.OK)
                 {
                     DialogResult drDelay = MessageBox.Show(this, "Debe introducir un nss para el nuevo Dependiente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     fi.Dispose();
@@ -112,13 +112,13 @@ namespace CapaPresentacion
                     }
                     //En caso de que haya clickado en cancelar, vendrá aquí
                 }
-            } 
+            }
             //En cualquier caso, destruimos el formulario de introducción de datos    
             fi.Dispose();
-            
-       }
 
-        
+        }
+
+
         //Método búsqueda de un dependiente
         private void búsquedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -133,7 +133,7 @@ namespace CapaPresentacion
                 //Si no, permitirá introducir otro nss
                 if (d == null)
                 {
-                    DialogResult dr2=MessageBox.Show(this, "¿Quieres introducir otro dato?", "No existe un dependiente con ese NºSS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult dr2 = MessageBox.Show(this, "¿Quieres introducir otro dato?", "No existe un dependiente con ese NºSS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr2 == DialogResult.Yes)
                     {
                         fi.Dispose();
@@ -149,7 +149,7 @@ namespace CapaPresentacion
                     //Muestra el dependiente en formato de solo lectura
                     FormDependientes fd = new FormDependientes("Búsqueda");
                     fd.button2.Dispose();
-                    fd.button1.Location= new System.Drawing.Point(108, 232); //movemos el boton aceptar
+                    fd.button1.Location = new System.Drawing.Point(108, 232); //movemos el boton aceptar
 
 
 
@@ -157,11 +157,11 @@ namespace CapaPresentacion
                     fd.textBox2.Text = d.Nombre;
                     fd.textBox2.ReadOnly = fd.textBox3.ReadOnly = fd.textBox4.ReadOnly = true;
                     fd.textBox3.Text = d.Apellidos;
-                    fd.textBox4.Text = ""+d.Comision;
+                    fd.textBox4.Text = "" + d.Comision;
                     fd.ShowDialog();
                     //mostrar uno con los datos
                 }
-                
+
             }
             fi.Dispose();
         }
@@ -179,7 +179,7 @@ namespace CapaPresentacion
                 Dependiente daux = new Dependiente(fi.textBox1.Text, null, null);
                 Dependiente d = sd.ObtenerInfoDependiente(daux);
                 //Si el dependiente que queremos dar de baja no está, permitiremos introducir otro
-                if (d == null) 
+                if (d == null)
                 {
                     DialogResult dr2 = MessageBox.Show(this, "¿Quieres introducir otro?", "No existe un dependiente con ese NºSS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr2 == DialogResult.Yes)
@@ -195,14 +195,14 @@ namespace CapaPresentacion
                 else //Si está, le enseñamos los datos y le damos la opcion de dar de baja
                 {
                     fi.Dispose();
-                    FormDependientes fd = new FormDependientes("Baja");                    
+                    FormDependientes fd = new FormDependientes("Baja");
                     fd.textBox1.Text = d.NSS;
                     fd.textBox1.ReadOnly = true;
                     fd.textBox2.Text = d.Nombre;
                     fd.textBox2.ReadOnly = true;
                     fd.textBox3.Text = d.Apellidos;
                     fd.textBox3.ReadOnly = true;
-                    fd.textBox4.Text = d.Comision+"";
+                    fd.textBox4.Text = d.Comision + "";
                     fd.textBox4.ReadOnly = true;
                     fd.button1.Text = "Dar baja";
 
@@ -232,7 +232,7 @@ namespace CapaPresentacion
             }
             fi.Dispose();
 
-       }
+        }
 
         //Métodos correspondientes a los botones de Artículos
 
@@ -254,7 +254,7 @@ namespace CapaPresentacion
                 }
                 if (dr == DialogResult.OK)
                 {
-                    Articulo aaux= new Articulo(fi.textBox1.Text, tipoIva.normal, 0);
+                    Articulo aaux = new Articulo(fi.textBox1.Text, tipoIva.normal, 0);
                     Articulo a = sa.ObtenerInfoArticulo(aaux);
                     //Si existe ya el artículo
                     if (a != null)
@@ -278,27 +278,27 @@ namespace CapaPresentacion
                         fa.textBox1.Text = aaux.Codigo; //código que hemos comprobado que aún no existía
                         DialogResult dr3 = fa.ShowDialog();
 
-
-                        if (dr3 == DialogResult.OK)
+                        //En caso de que pulse aceptar
+                        if (dr3 == DialogResult.OK | dr3 == DialogResult.Abort)
                         {
-                            //hacer que vuelva a dejar meter datos
-                            while ((fa.textBox2.Text == "" | fa.textBox3.Text == "") & (dr3 == DialogResult.OK | dr3 == DialogResult.Abort)) ///PROBLEMA AQUI SI METO SOLO DESCRIPCION Y LUEGO SOLO PRECIO
+                            //hacer que vuelva a dejar meter datos si 
+                            while ((fa.textBox2.Text == "" | fa.textBox3.Text == "") | (dr3 == DialogResult.Abort))
                             {
-                                //En este caso, las validaciones las realizamos desde el mismo formulario articulos
+                                //Validación de numero positivo en el cuadro de precio de coste, desde el formulario
                                 MessageBox.Show(this, "Debe introducir una descripción y un precio de coste válidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                                 dr3 = fa.ShowDialog();
                             }
+                            //Si sale, y ha salido porque todo estaba bien, lo creo
                             if (dr3 == DialogResult.OK)
                             {
                                 String descripcion = fa.textBox2.Text;
-                                Double precioCoste = Double.Parse(fa.textBox3.Text);                               
+                                Double precioCoste = Double.Parse(fa.textBox3.Text);
                                 tipoIva iva;
                                 if (fa.radioButton1.Checked)
                                 {
                                     iva = tipoIva.normal;
                                 }
-                                else if(fa.radioButton2.Checked)
+                                else if (fa.radioButton2.Checked)
                                 {
                                     iva = tipoIva.reducido;
                                 }
@@ -310,19 +310,9 @@ namespace CapaPresentacion
                                 a2.Descripcion = descripcion;
                                 sa.DarAltaArticulo(a2);
                             }
-                        
+                        }
 
-                        }
-                        if (dr3 == DialogResult.Abort) //No saldrá hasta que introduzcamos un precio coste valido o seleccionemos cancelar
-                        {
-                            while (dr3 == DialogResult.Abort)
-                            {
-                                fa.Dispose();
-                                fa = new FormArticulos("Alta");
-                                fa.textBox1.Text = aaux.Codigo; //codigo que hemos buscado que no existía
-                                dr3 = fa.ShowDialog();
-                            }
-                        }
+
                         else
                         {
                             fa.Dispose();
@@ -332,7 +322,7 @@ namespace CapaPresentacion
             }
             fi.Dispose();
 
-     }
+        }
 
         private void bajaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -365,7 +355,7 @@ namespace CapaPresentacion
                     fa.textBox2.Text = a.Descripcion;
                     fa.textBox2.ReadOnly = true;
                     fa.label3.Text = "Precio venta";
-                    fa.textBox3.Text = a.PrecioVenta+"";
+                    fa.textBox3.Text = a.PrecioVenta + "";
                     fa.textBox3.ReadOnly = true;
 
                     fa.radioButton1.Enabled = fa.radioButton2.Enabled = fa.radioButton3.Enabled = false;
@@ -396,7 +386,7 @@ namespace CapaPresentacion
 
         private void búsquedaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FormIntroducir fi = new FormIntroducir("NºSS");
+            FormIntroducir fi = new FormIntroducir("Código");
             fi.ShowDialog();
             DialogResult dr = fi.DialogResult;
             if (dr == DialogResult.OK)
@@ -427,8 +417,16 @@ namespace CapaPresentacion
                     fa.textBox1.Text = a.Codigo;
                     fa.textBox2.Text = a.Descripcion;
                     fa.textBox2.ReadOnly = fa.textBox3.ReadOnly = true;
-                    fa.textBox3.Text = a.PrecioVenta+"";
+                    fa.textBox3.Text = a.PrecioVenta + "";
                     fa.radioButton1.Enabled = fa.radioButton2.Enabled = fa.radioButton3.Enabled = false;
+                    if (a.Iva == tipoIva.reducido)
+                    {
+                        fa.radioButton2.Checked = true;
+                    }
+                    if (a.Iva == tipoIva.superReducido)
+                    {
+                        fa.radioButton3.Checked = true;
+                    }
 
                     fa.ShowDialog();
                     //mostrar uno con los datos
@@ -473,7 +471,7 @@ namespace CapaPresentacion
                     else //le dejaremos crear una al no haber ninguno aun
                     {
                         fi.Dispose();
-                        FormVentas fv = new FormVentas("Alta",sa,sv);
+                        FormVentas fv = new FormVentas("Alta", sa, sv);
                         fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                         fv.textBox2.Text = vaux.FechaVenta.ToString();
                         DialogResult dr3 = fv.ShowDialog();
@@ -482,10 +480,10 @@ namespace CapaPresentacion
                         if (dr3 == DialogResult.OK)
                         {
                             //hacer que vuelva a dejar meter datos
-                            while ((fv.textBox3.Text == "" ) & dr3 == DialogResult.OK)
+                            while ((fv.textBox3.Text == "") & dr3 == DialogResult.OK)
                             {
                                 fv.Dispose();
-                                fv = new FormVentas("Alta",sa,sv);
+                                fv = new FormVentas("Alta", sa, sv);
                                 fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                                 fv.textBox2.Text = vaux.FechaVenta.ToString();
                                 dr3 = fv.ShowDialog();
@@ -495,16 +493,16 @@ namespace CapaPresentacion
                                 //Aquí comprobaremos que el dependiente ya existe y que hemos añadido al menos un articulo a la venta
                                 Dependiente daux = new Dependiente(fv.textBox3.Text, null, null);
                                 Dependiente d = sd.ObtenerInfoDependiente(daux);
-                                if (d != null & fv.listBox1.Items.Count>0)
+                                if (d != null & fv.listBox1.Items.Count > 0)
                                 {
-                                   //hay que instanciar v en el principal, sino es nulo y se quejará.
+                                    //hay que instanciar v en el principal, sino es nulo y se quejará.
                                     sd.AnadirVentaADependiente(v, d);
                                     sv.DarAltaVenta(v);
-                                    
+
                                 }
 
 
-                                
+
                             }
 
 
@@ -518,11 +516,6 @@ namespace CapaPresentacion
                 }
             }
             fi.Dispose();
-        }
-
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-
         }
     }
 
