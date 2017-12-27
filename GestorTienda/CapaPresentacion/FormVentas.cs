@@ -32,6 +32,7 @@ namespace CapaPresentacion
             this.sa = sa;
             this.sv = sv;
             this.v = new VentaContado(cadena, null);
+            this.sv.DarAltaVenta(this.v);
 
         }
 
@@ -66,7 +67,7 @@ namespace CapaPresentacion
             if (dr == DialogResult.OK)
             {
                 //Añado a la venta base, que empieza como vacia (v) un articulo, el cual busco en nuestro servicio articulos.
-                sv.DarAltaVenta(v);
+                
                 //Para ello necesito construir un articulo envoltorio del codigo
                 
                 if (sa.ObtenerInfoArticulo(new Articulo(fal.textBox1.Text, tipoIva.normal, 0)) != null) //Si el articulo esta en nuestra base de datos
@@ -80,7 +81,7 @@ namespace CapaPresentacion
                         this.listBox1.Items.Add(new Label().Text=l.ToString());
                     }
                     
-                    
+
                     // En esta instruccion hay que añadir la linea de venta en concreto, porque no se puede hacer un .items= a algo    --  (Prueba) listBox1.Items.Add("Hola");
                 }
                 else

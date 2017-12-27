@@ -497,9 +497,8 @@ namespace CapaPresentacion
                                 Dependiente d = sd.ObtenerInfoDependiente(daux);
                                 if (d != null & fv.listBox1.Items.Count>0)
                                 {
-                                   //hay que instanciar v en el principal, sino es nulo y se quejará.
+                                    Venta vBuena = sv.ObtenerInfoVenta(new VentaContado(fv.textBox1.Text, null));
                                     sd.AnadirVentaADependiente(v, d);
-                                    sv.DarAltaVenta(v);
                                     
                                 }
 
