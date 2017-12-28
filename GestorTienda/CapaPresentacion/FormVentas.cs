@@ -18,6 +18,7 @@ namespace CapaPresentacion
         private List<LineaVenta> lista;
         private ServicioArticulo sa;
         private ServicioVenta sv;
+        private ServicioDependiente sd;
 
         public FormVentas()
         {
@@ -25,26 +26,36 @@ namespace CapaPresentacion
             
         }
 
-        public FormVentas(String cadena, String codigo ,ServicioArticulo sa,ServicioVenta sv)
+        public FormVentas(String cadena, String codigo ,ServicioArticulo sa,ServicioVenta sv, ServicioDependiente sd)
         {
             InitializeComponent();
             this.Text = cadena + this.Text;
             this.sa = sa;
             this.sv = sv;
+            this.sd = sd;
             this.v = new VentaContado(codigo, null);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.checkBox1.Checked == true)
+            if (validacion()) //Si cumple las condiciones, da de alta la venta adecuada,
             {
-                VentaTarjeta vaux =(VentaTarjeta) this.v;
-                vaux.NumTarjeta = this.textBox4.Text;
-                
+
+
+                if (this.checkBox1.Checked == true)
+                {
+                    VentaTarjeta vaux = (VentaTarjeta)this.v;
+                    vaux.NumTarjeta = this.textBox4.Text;
+
+                }
+                this.sv.DarAltaVenta(v);
+                this.DialogResult = DialogResult.OK;
             }
-            this.sv.DarAltaVenta(v);
-            this.DialogResult = DialogResult.OK;
+            else
+            {
+                this.DialogResult = DialogResult.Abort;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -98,7 +109,6 @@ namespace CapaPresentacion
                     }
                     
                     
-                    // En esta instruccion hay que añadir la linea de venta en concreto, porque no se puede hacer un .items= a algo    --  (Prueba) listBox1.Items.Add("Hola");
                 }
                 else
                 {
@@ -119,9 +129,28 @@ namespace CapaPresentacion
             }
         }
 
-        private void FormVentas_Load(object sender, EventArgs e)
+        private bool validacion()
         {
+            Dependiente aux = new Dependiente(this.textBox3.Text, "", ""); //Envolvemos el nss del dependiente que se quiere incluir en la venta
+            if((sd.ObtenerInfoDependiente(aux)!= null)&(v.Lineas.Count > 0)) //Si el dependiente está dado de alta en la base, y al menos ha añadido un articulo a la venta, devuelve true
+            {
+                if(this.checkBox1.Checked==true & this.textBox4.Text == "")//Lo pongo aquí para mejor visibilidad
+                {                                                              //Si tiene activada la opción de tarjeta, pero no mete una cadena (no compruebo numerica), devolverá falso
+                    return false;                                                //Si no la tiene activada, devuelve true tambien
+                }
+                else
+                {
+                    return true;
+                }
+
+            }
+            else
+            {
+                return false;
+            }
 
         }
+
+
     }
 }

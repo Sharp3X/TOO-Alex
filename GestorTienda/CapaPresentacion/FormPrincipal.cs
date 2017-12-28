@@ -360,6 +360,15 @@ namespace CapaPresentacion
 
                     fa.radioButton1.Enabled = fa.radioButton2.Enabled = fa.radioButton3.Enabled = false;
 
+                    if (a.Iva == tipoIva.reducido)
+                    {
+                        fa.radioButton2.Checked = true;
+                    }
+                    if (a.Iva == tipoIva.superReducido)
+                    {
+                        fa.radioButton3.Checked = true;
+                    }
+
                     DialogResult dr3 = fa.ShowDialog();
 
                     if (dr3 == DialogResult.OK)
@@ -452,6 +461,7 @@ namespace CapaPresentacion
                     fi = new FormIntroducir("Código");
                     dr = fi.ShowDialog();
                 }
+
                 if (dr == DialogResult.OK)
                 {
                     Venta vaux = new VentaContado(fi.textBox1.Text, null);
@@ -472,19 +482,23 @@ namespace CapaPresentacion
                     else //le dejaremos crear una al no haber ninguno aun
                     {
                         fi.Dispose();
-                        FormVentas fv = new FormVentas("Alta",vaux.Codigo, sa,sv);
+                        FormVentas fv = new FormVentas("Alta",vaux.Codigo, sa,sv,sd);
                         fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                         fv.textBox2.Text = vaux.FechaVenta.ToString();
                         DialogResult dr3 = fv.ShowDialog();
 
-
+                        while (dr3 == DialogResult.Abort)
+                        {
+                            DialogResult drDelay = MessageBox.Show(this, "Debe introducir un dependiente válido, añadir al menos un artículo, o añadir el número de tarjeta si la ha seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            dr3 = fv.ShowDialog();
+                        }
                         if (dr3 == DialogResult.OK)
                         {
                             //hacer que vuelva a dejar meter datos
                             while ((fv.textBox3.Text == "") & dr3 == DialogResult.OK)
                             {
                                 fv.Dispose();
-                                fv = new FormVentas("Alta", vaux.Codigo,sa,sv);
+                                fv = new FormVentas("Alta", vaux.Codigo,sa,sv,sd);
                                 fv.textBox1.Text = vaux.Codigo; //codigo que hemos buscado que no existía
                                 fv.textBox2.Text = vaux.FechaVenta.ToString();
                                 dr3 = fv.ShowDialog();
@@ -514,6 +528,138 @@ namespace CapaPresentacion
                             fv.Dispose();
                         }
                     }
+                }
+            }
+            fi.Dispose();
+        }
+
+        private void bajaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FormIntroducir fi = new FormIntroducir("Código");
+            fi.ShowDialog();
+            DialogResult dr = fi.DialogResult;
+            if (dr == DialogResult.OK)
+            {
+                Venta vaux = new VentaContado(fi.textBox1.Text, null);
+                Venta v = sv.ObtenerInfoVenta(vaux);
+                if (v == null) //No está
+                {
+                    DialogResult dr2 = MessageBox.Show(this, "¿Quieres introducir otro?", "No existe una venta con ese código", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr2 == DialogResult.Yes)
+                    {
+                        fi.Dispose();
+                        this.bajaToolStripMenuItem2.PerformClick();
+                    }
+                    else
+                    {
+                        fi.Dispose();
+                    }
+                }
+                else //le enseñamos los datos y le damos la opcion de dar de baja
+                {
+                    fi.Dispose();
+                    FormBajaVentas fbv = new FormBajaVentas();
+                    fbv.textBox1.Text = v.Codigo;
+                    fbv.textBox1.ReadOnly = true;
+                    fbv.textBox2.Text = v.FechaVenta.ToString();
+                    fbv.textBox2.ReadOnly = true;
+                    fbv.textBox3.Text = v.Dependiente.ToString();
+                    fbv.textBox3.ReadOnly = true;
+                    foreach (LineaVenta l in v.Lineas)
+                    {
+                        fbv.listBox1.Items.Add(new Label().Text = l.ToString());
+                    }
+                    fbv.button3.Dispose();
+                    fbv.checkBox1.Enabled = false;
+                    fbv.textBox4.ReadOnly = true;
+                    var vtaux = v as VentaTarjeta; //Si se consigue castear, entonces será una VentaTarjeta, si no será una VentaContado
+                    if (vtaux == null)
+                    {
+                        fbv.checkBox1.Checked = false;
+
+                    }
+                    else
+                    {
+                        fbv.checkBox1.Checked = true;
+                        fbv.textBox4.Text = vtaux.NumTarjeta;
+                    }
+                    
+                    DialogResult dr3 = fbv.ShowDialog();
+
+                    if (dr3 == DialogResult.OK)
+                    {
+                        DialogResult dr4 = MessageBox.Show(this, "¿Está seguro que desea dar de baja la venta?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr4 == DialogResult.Yes)
+                        {
+                            sv.DarBajaVenta(v);
+                            MessageBox.Show(this, "Venta eliminada", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                        else
+                        {
+                            fbv.Dispose();
+                        }
+                    }
+                    else
+                    {
+                        fbv.Dispose();
+                    }
+                }
+            }
+            fi.Dispose();
+        }
+
+        private void búsquedaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FormIntroducir fi = new FormIntroducir("Código");
+            fi.ShowDialog();
+            DialogResult dr = fi.DialogResult;
+            if (dr == DialogResult.OK)
+            {
+                Venta vaux = new VentaContado(fi.textBox1.Text, null);
+                Venta v = sv.ObtenerInfoVenta(vaux);
+                if (v == null)
+                {
+                    DialogResult dr2 = MessageBox.Show(this, "¿Quieres introducir otro dato?", "No existe una venta con ese código", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr2 == DialogResult.Yes)
+                    {
+                        fi.Dispose();
+                        this.búsquedaToolStripMenuItem2.PerformClick();
+                    }
+                    else
+                    {
+                        fi.Dispose();
+                    }
+                }
+                else
+                {
+                    fi.Dispose();
+                    FormBajaVentas fbv = new FormBajaVentas("Búsqueda");
+                    fbv.textBox1.Text = v.Codigo;
+                    fbv.textBox1.ReadOnly = true;
+                    fbv.textBox2.Text = v.FechaVenta.ToString();
+                    fbv.textBox2.ReadOnly = true;
+                    fbv.textBox3.Text = v.Dependiente.ToString();
+                    fbv.textBox3.ReadOnly = true;
+                    foreach (LineaVenta l in v.Lineas)
+                    {
+                        fbv.listBox1.Items.Add(new Label().Text = l.ToString());
+                    }
+                    fbv.button3.Dispose();
+                    fbv.checkBox1.Enabled = false;
+                    fbv.textBox4.ReadOnly = true;
+                    var vtaux = v as VentaTarjeta; //Si se consigue castear, entonces será una VentaTarjeta, si no será una VentaContado
+                    if (vtaux == null)
+                    {
+                        fbv.checkBox1.Checked = false;
+
+                    }
+                    else
+                    {
+                        fbv.checkBox1.Checked = true;
+                        fbv.textBox4.Text = vtaux.NumTarjeta;
+                    }
+
+                    DialogResult dr3 = fbv.ShowDialog();
                 }
             }
             fi.Dispose();
