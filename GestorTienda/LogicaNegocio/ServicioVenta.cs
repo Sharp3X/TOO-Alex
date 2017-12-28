@@ -33,9 +33,20 @@ namespace LogicaNegocio
 
         public void AnadirLineaVenta(Venta pVenta, Articulo pArticulo, int pCantidad)// la venta parametro es a la que se le añade la linea de venta que sera creada con el articulo y la cantidad; por tanto el articulo debe ser comprobado que existe antes de añadirlo.
         {
-            List<LineaVenta> listaActualizable = pVenta.Lineas;
+            bool esta = false;
+            foreach(LineaVenta l in pVenta.Lineas)
+            {
+                if (l.Articulo.Equals(pArticulo))
+                {
+                    esta = true;
+                    l.Cantidad = l.Cantidad + pCantidad;
+                }
+            }
+            if (!esta)
+            {
             LineaVenta nLinea = new LineaVenta(pArticulo, pCantidad);
-            listaActualizable.Add(nLinea);
+            pVenta.Lineas.Add(nLinea);
+            }
         }
 
         public ICollection<Venta> DatosVentas()//devuelve una coleccion con todos las Ventas de la bd

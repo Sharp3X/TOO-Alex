@@ -53,7 +53,8 @@ namespace Modelo_de_dominio
         public double PrecioVenta {
             get
             {
-                return this.precioCoste * (1 + ((int)this.iva) / 100);
+                
+                return this.precioCoste * (1 + (((int)this.iva) / 100));
             }
         }
 

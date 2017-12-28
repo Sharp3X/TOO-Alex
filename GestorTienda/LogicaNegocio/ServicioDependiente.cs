@@ -37,30 +37,39 @@ namespace LogicaNegocio
             Dependiente d = this.bd.BuscarDependiente(pDependiente);//cogemos el dependiente al que queremos añadirle una venta
             if (d != null)
             {
-            d.Ventas.Add(pVenta);
+                d.Ventas.Add(pVenta);
+                this.CalcularComision(d);
                 return true;
             }
             return false;
 
         }
 
-        public int VentasMes(int mes, Dependiente pDependiente)//el mes debe estar comprendido entre 1 y 12, del dependiente nos interesa su codigo.
+        public List<Venta> VentasMes(int mes, Dependiente pDependiente)//el mes debe estar comprendido entre 1 y 12, del dependiente nos interesa su codigo.
         {
             Dependiente d = this.bd.BuscarDependiente(pDependiente);
-            int contador = 0;
+            List<Venta> ventasMes = new List<Venta>();
             foreach(Venta v in d.Ventas)
             {
                 if (v.FechaVenta.Month == mes)
                 {
-                    contador++;
+                    ventasMes.Add(v);
                 }
             }
-            return contador;
+            return ventasMes;
         }
 
-        private void CalcularComision(Dependiente pDependiente, int numVentas)// el dependiente es real, este metodo es privado porque solo lo usare dentro de esta clase
+        private void CalcularComision(Dependiente pDependiente)// el dependiente es real, este metodo es privado porque solo lo usare dentro de esta clase
         {
-            pDependiente.Comision = numVentas * 0.05;//el 5% de las ventas le corresponderan al dependiente.
+            double dinero = 0.0;
+            foreach(Venta v in VentasMes(DateTime.Now.Month, pDependiente))
+            {
+                foreach(LineaVenta l in v.Lineas)
+                {
+                    dinero = dinero + l.PrecioLineaVenta;
+                }
+            }
+            pDependiente.Comision = dinero * 0.05;//el 5% de las ventas le corresponderan al dependiente.
         }
 
         public ICollection<Dependiente> DatosDependientes()//devuelve una coleccion con todos los dependientes de la bd

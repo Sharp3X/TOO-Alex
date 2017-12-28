@@ -16,6 +16,26 @@ namespace Modelo_de_dominio
             this.articulo = articulo;
             this.cantidad = cantidad;
         }
+
+        public Articulo Articulo
+        {
+            get
+            {
+                return this.articulo;
+            }
+        }
+
+        public int Cantidad
+        {
+            get
+            {
+                return this.cantidad;
+            }
+            set
+            {
+                this.cantidad = value;
+            }
+        }
         public double PrecioLineaVenta
         {
             get
