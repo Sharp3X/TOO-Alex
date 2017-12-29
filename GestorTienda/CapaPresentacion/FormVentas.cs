@@ -91,6 +91,12 @@ namespace CapaPresentacion
             FormAniadirLinea fal = new FormAniadirLinea();
             fal.ShowDialog();
             DialogResult dr = fal.DialogResult;
+            while (dr == DialogResult.Abort)
+            {
+                fal.Dispose();
+                fal = new FormAniadirLinea();
+                dr = fal.ShowDialog();
+            }
             if (dr == DialogResult.OK)
             {
                 //Añado a la venta base, que empieza como vacia (v) un articulo, el cual busco en nuestro servicio articulos.
@@ -115,15 +121,7 @@ namespace CapaPresentacion
                     DialogResult drDelay = MessageBox.Show(this, "El articulo no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if (dr == DialogResult.Abort) //No saldrá hasta que introduzcamos un codigo o cantidad validaos o pulsemos en cerrar
-            {
-                while (dr == DialogResult.Abort)
-                {
-                    fal.Dispose();
-                    fal = new FormAniadirLinea();
-                    dr = fal.ShowDialog();
-                }
-            }
+
             else {
                 fal.Dispose();
             }
