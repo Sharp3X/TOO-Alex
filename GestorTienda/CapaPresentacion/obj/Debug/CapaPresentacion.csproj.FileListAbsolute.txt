@@ -59,3 +59,4 @@ F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPrese
 E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormAniadirLinea.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBajaVentas.resources
 E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBajaVentas.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormListado.resources

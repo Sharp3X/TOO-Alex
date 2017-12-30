@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo_de_dominio;
 using LogicaNegocio;
+using System.Linq;
 
 namespace CapaPresentacion
 {
@@ -664,6 +665,16 @@ namespace CapaPresentacion
             }
             fi.Dispose();
         }
+
+        //Practica 11
+        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+                FormListado fl = new FormListado(sd.DatosDependientes().ToList());
+                fl.ShowDialog();
+            
+
+       }
     }
 
 }
