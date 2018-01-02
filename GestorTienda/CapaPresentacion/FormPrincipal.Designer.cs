@@ -33,6 +33,7 @@
             this.altaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bajaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,10 @@
             this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.bajaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.búsquedaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.búsqueda2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorridoUnoAUnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorridoUnoAUnoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +68,9 @@
             this.altaToolStripMenuItem,
             this.bajaToolStripMenuItem,
             this.búsquedaToolStripMenuItem,
-            this.listadoToolStripMenuItem});
+            this.búsqueda2ToolStripMenuItem,
+            this.listadoToolStripMenuItem,
+            this.recorridoUnoAUnoToolStripMenuItem});
             this.dependientersToolStripMenuItem.Name = "dependientersToolStripMenuItem";
             this.dependientersToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.dependientersToolStripMenuItem.Text = "Dependientes";
@@ -90,12 +96,21 @@
             this.búsquedaToolStripMenuItem.Text = "Búsqueda";
             this.búsquedaToolStripMenuItem.Click += new System.EventHandler(this.búsquedaToolStripMenuItem_Click);
             // 
+            // listadoToolStripMenuItem
+            // 
+            this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listadoToolStripMenuItem.Text = "Listado";
+            this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
+            // 
             // articulosToolStripMenuItem
             // 
             this.articulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem1,
             this.bajaToolStripMenuItem1,
-            this.búsquedaToolStripMenuItem1});
+            this.búsquedaToolStripMenuItem1,
+            this.dataGridViewToolStripMenuItem,
+            this.recorridoUnoAUnoToolStripMenuItem1});
             this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
             this.articulosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.articulosToolStripMenuItem.Text = "Artículos";
@@ -152,12 +167,33 @@
             this.búsquedaToolStripMenuItem2.Text = "Búsqueda";
             this.búsquedaToolStripMenuItem2.Click += new System.EventHandler(this.búsquedaToolStripMenuItem2_Click);
             // 
-            // listadoToolStripMenuItem
+            // búsqueda2ToolStripMenuItem
             // 
-            this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.listadoToolStripMenuItem.Text = "Listado";
-            this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
+            this.búsqueda2ToolStripMenuItem.Name = "búsqueda2ToolStripMenuItem";
+            this.búsqueda2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.búsqueda2ToolStripMenuItem.Text = "Búsqueda 2";
+            this.búsqueda2ToolStripMenuItem.Click += new System.EventHandler(this.búsqueda2ToolStripMenuItem_Click);
+            // 
+            // recorridoUnoAUnoToolStripMenuItem
+            // 
+            this.recorridoUnoAUnoToolStripMenuItem.Name = "recorridoUnoAUnoToolStripMenuItem";
+            this.recorridoUnoAUnoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.recorridoUnoAUnoToolStripMenuItem.Text = "Recorrido uno a uno";
+            this.recorridoUnoAUnoToolStripMenuItem.Click += new System.EventHandler(this.recorridoUnoAUnoToolStripMenuItem_Click);
+            // 
+            // dataGridViewToolStripMenuItem
+            // 
+            this.dataGridViewToolStripMenuItem.Name = "dataGridViewToolStripMenuItem";
+            this.dataGridViewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dataGridViewToolStripMenuItem.Text = "DataGridView";
+            this.dataGridViewToolStripMenuItem.Click += new System.EventHandler(this.dataGridViewToolStripMenuItem_Click);
+            // 
+            // recorridoUnoAUnoToolStripMenuItem1
+            // 
+            this.recorridoUnoAUnoToolStripMenuItem1.Name = "recorridoUnoAUnoToolStripMenuItem1";
+            this.recorridoUnoAUnoToolStripMenuItem1.Size = new System.Drawing.Size(182, 22);
+            this.recorridoUnoAUnoToolStripMenuItem1.Text = "Recorrido uno a uno";
+            this.recorridoUnoAUnoToolStripMenuItem1.Click += new System.EventHandler(this.recorridoUnoAUnoToolStripMenuItem1_Click);
             // 
             // FormPrincipal
             // 
@@ -191,6 +227,10 @@
         private System.Windows.Forms.ToolStripMenuItem bajaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem búsquedaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem búsqueda2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorridoUnoAUnoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataGridViewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorridoUnoAUnoToolStripMenuItem1;
     }
 }
 

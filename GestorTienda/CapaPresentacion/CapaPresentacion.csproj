@@ -64,6 +64,18 @@
     <Compile Include="FormBajaVentas.Designer.cs">
       <DependentUpon>FormBajaVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBúsqueda2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBúsqueda2.Designer.cs">
+      <DependentUpon>FormBúsqueda2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataGridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataGridView.Designer.cs">
+      <DependentUpon>FormDataGridView.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIntroducir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,24 @@
     <Compile Include="FormDependientes.Designer.cs">
       <DependentUpon>FormDependientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUnoaUnoA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUnoaUnoA.Designer.cs">
+      <DependentUpon>FormUnoaUnoA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnoaUnoD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUnoaUnoD.Designer.cs">
+      <DependentUpon>FormUnoaUnoD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnoaUnoV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUnoaUnoV.Designer.cs">
+      <DependentUpon>FormUnoaUnoV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +135,12 @@
     <EmbeddedResource Include="FormBajaVentas.resx">
       <DependentUpon>FormBajaVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBúsqueda2.resx">
+      <DependentUpon>FormBúsqueda2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataGridView.resx">
+      <DependentUpon>FormDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIntroducir.resx">
       <DependentUpon>FormIntroducir.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +152,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDependientes.resx">
       <DependentUpon>FormDependientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUnoaUnoA.resx">
+      <DependentUpon>FormUnoaUnoA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUnoaUnoD.resx">
+      <DependentUpon>FormUnoaUnoD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUnoaUnoV.resx">
+      <DependentUpon>FormUnoaUnoV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>

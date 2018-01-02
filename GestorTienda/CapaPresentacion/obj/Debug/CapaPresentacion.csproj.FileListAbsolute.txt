@@ -60,3 +60,8 @@ E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBajaVentas.resources
 E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBajaVentas.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormListado.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBúsqueda2.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDataGridView.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoA.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoD.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoV.resources

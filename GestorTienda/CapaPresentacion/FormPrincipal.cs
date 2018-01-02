@@ -675,6 +675,32 @@ namespace CapaPresentacion
             
 
        }
+
+        private void búsqueda2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBúsqueda2 fb = new FormBúsqueda2(sd.DatosDependientes().ToList());
+            fb.ShowDialog();
+        }
+
+        private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUnoaUnoD fu = new FormUnoaUnoD(sd.DatosDependientes().ToList());
+            fu.ShowDialog();
+        }
+
+        private void dataGridViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDataGridView fd = new FormDataGridView(sa.DatosCatalogoTienda().ToList());
+            fd.ShowDialog(); 
+        }
+
+        private void recorridoUnoAUnoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormUnoaUnoA fu = new FormUnoaUnoA(sa.DatosCatalogoTienda().ToList());
+
+            fu.ShowDialog();
+        }
+
     }
 
 }
