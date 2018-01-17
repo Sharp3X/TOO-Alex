@@ -76,7 +76,7 @@ namespace Modelo_de_dominio
             }
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return ("Nombre: " + this.Nombre + " Apellidos: " + this.Apellidos + " nss: " + this.NSS + " ventas: " + this.Ventas.ToString());
         }

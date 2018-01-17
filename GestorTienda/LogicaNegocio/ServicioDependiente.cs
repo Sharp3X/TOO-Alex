@@ -15,6 +15,13 @@ namespace LogicaNegocio
         public ServicioDependiente()//el constructor crea una conexion con la base de datos.
         {
             this.bd = BDDependiente.GetInstance();
+            this.bd.AnadirDependiente(new Dependiente("101", "Manuel", "Rodríguez"));
+            this.bd.AnadirDependiente(new Dependiente("102", "Pepe", "Pérez"));
+            this.bd.AnadirDependiente(new Dependiente("103", "Alex", "Martínez"));
+            this.bd.AnadirDependiente(new Dependiente("104", "David", "Madorrán"));
+            this.bd.AnadirDependiente(new Dependiente("105", "Rodrigo", "Ortega"));
+            this.bd.AnadirDependiente(new Dependiente("106", "Oscar", "Ramírez"));
+
         }
 
         public bool DarAltaDependiente(Dependiente pDependiente)//el dependiente parametro no debe estar previamente en nuestra bd.

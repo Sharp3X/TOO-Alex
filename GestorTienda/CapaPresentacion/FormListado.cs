@@ -33,7 +33,7 @@ namespace CapaPresentacion
             this.listBox2.DisplayMember = "nombre";
 
             this.listBox3.DataSource = bs;
-            this.listBox3.DisplayMember = "apellidos";   //es por comision pero uso apellidos para probar
+            this.listBox3.DisplayMember = "comision";   
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -43,26 +43,21 @@ namespace CapaPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.listado.OrderBy(l => l.NSS);  //Esto no chuta
-            this.listBox1.Refresh();
-            this.listBox2.Refresh();
-            this.listBox3.Refresh();
+            this.listado.Sort((x,y) => String.Compare(x.NSS,y.NSS));
+            this.bs.ResetBindings(false);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.listado.OrderBy(l => l.Nombre);
-            this.listBox1.Refresh();
-            this.listBox2.Refresh();
-            this.listBox3.Refresh();
+            this.listado.Sort((x, y) => String.Compare(x.Nombre, y.Nombre));
+            this.bs.ResetBindings(false);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.listado.OrderBy(l => l.Apellidos);
-            this.listBox1.Refresh();
-            this.listBox2.Refresh();
-            this.listBox3.Refresh();
+            this.listado.Sort((x, y) => x.Comision.CompareTo(y.Comision));
+            this.bs.ResetBindings(false);
         }
     }
 }

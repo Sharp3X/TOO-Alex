@@ -639,7 +639,7 @@ namespace CapaPresentacion
                     fbv.textBox1.ReadOnly = true;
                     fbv.textBox2.Text = v.FechaVenta.ToString();
                     fbv.textBox2.ReadOnly = true;
-                    fbv.textBox3.Text = v.Dependiente.ToString();
+                    fbv.textBox3.Text = v.Dependiente.NSS;
                     fbv.textBox3.ReadOnly = true;
                     foreach (LineaVenta l in v.Lineas)
                     {
@@ -648,7 +648,7 @@ namespace CapaPresentacion
                     fbv.button3.Dispose();
                     fbv.checkBox1.Enabled = false;
                     fbv.textBox4.ReadOnly = true;
-                    var vtaux = v as VentaTarjeta; //Si se consigue castear, entonces será una VentaTarjeta, si no será una VentaContado
+                    VentaTarjeta vtaux = v as VentaTarjeta; //Si se consigue castear, entonces será una VentaTarjeta, si no será una VentaContado
                     if (vtaux == null)
                     {
                         fbv.checkBox1.Checked = false;
@@ -690,7 +690,7 @@ namespace CapaPresentacion
 
         private void dataGridViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDataGridView fd = new FormDataGridView(sa.DatosCatalogoTienda().ToList());
+            FormDataGridViewArt fd = new FormDataGridViewArt(sa.DatosCatalogoTienda().ToList());
             fd.ShowDialog(); 
         }
 
@@ -701,6 +701,30 @@ namespace CapaPresentacion
             fu.ShowDialog();
         }
 
+        private void recorridoUnoAUnoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FormUnoaUnoV fu = new FormUnoaUnoV(sv.DatosVentas().ToList());
+
+            fu.ShowDialog();
+        }
+
+        private void dataGridViewToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormDataGridViewVenta fd = new FormDataGridViewVenta(sv.DatosVentas().ToList(),sv);
+            fd.ShowDialog();
+        }
+
+        private void listaPorIVAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBásicoArticulo fba = new FormBásicoArticulo(sa);
+            fba.ShowDialog();
+        }
+
+        private void ventaPorArtículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVentaArticulo fva = new FormVentaArticulo(sa, sv);
+            fva.ShowDialog();
+        }
     }
 
 }

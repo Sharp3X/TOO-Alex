@@ -31,7 +31,6 @@ E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPrese
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormArticulos.resources
-E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormArticulo.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDependientes.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormArticulos.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
@@ -61,7 +60,21 @@ F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPrese
 E:\Programs\sourcetree\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBajaVentas.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormListado.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBúsqueda2.resources
-F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDataGridView.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoA.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoD.resources
 F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoV.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormAniadirLinea.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBajaVentas.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBúsqueda2.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormListado.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDependientes.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoA.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoD.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormUnoaUnoV.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDataGridViewArt.resources
+E:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDataGridViewVenta.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormBásicoArticulo.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDataGridViewArt.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormDataGridViewVenta.resources
+F:\Uni\Tercero\TOO\trabajo TOO\GestorTienda\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentaArticulo.resources

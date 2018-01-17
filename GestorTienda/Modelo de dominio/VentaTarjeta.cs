@@ -25,7 +25,7 @@ namespace Modelo_de_dominio
                 this.numTarjeta = value;
             }
         }
-        public string ToString()
+        public override string ToString()
         {
             return (base.ToString() + " numeroTarjeta: " + this.NumTarjeta);
         }

@@ -54,11 +54,11 @@ namespace Modelo_de_dominio
             get
             {
                 
-                return this.precioCoste * (1 + (((int)this.iva) / 100));
+                return this.precioCoste * (1 + (((int)(this.iva))*1.0 / 100));
             }
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return ("codigo: " + this.Codigo + " precio: " + this.PrecioVenta);
         }

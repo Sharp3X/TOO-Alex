@@ -14,6 +14,40 @@ namespace LogicaNegocio
         public ServicioVenta()//el constructor crea una conexion con la base de datos.
         {
             this.bd = BDVenta.GetInstance();
+            Venta v;
+            v = new VentaContado("1001", new Dependiente("101", "Manuel", "Rodríguez"));
+            AnadirLineaVenta(v, new Articulo("1", tipoIva.normal, 1), 2);
+            this.bd.AnadirVenta(v);
+            v = new VentaContado("1002", new Dependiente("101", "Manuel", "Rodríguez"));
+            AnadirLineaVenta(v, new Articulo("1", tipoIva.normal, 1), 3);
+            AnadirLineaVenta(v, new Articulo("2", tipoIva.normal, 10), 3);
+            this.bd.AnadirVenta(v);
+            v = new VentaContado("1003", new Dependiente("103", "Alex", "Martínez"));
+            AnadirLineaVenta(v, new Articulo("5", tipoIva.reducido, 3), 2);
+            this.bd.AnadirVenta(v);
+            v = new VentaTarjeta("XXXX","1004", new Dependiente("106", "Oscar", "Ramírez"));
+            AnadirLineaVenta(v, new Articulo("1", tipoIva.normal, 1), 2);
+            AnadirLineaVenta(v, new Articulo("7", tipoIva.superReducido, 2), 6);
+            AnadirLineaVenta(v, new Articulo("5", tipoIva.reducido, 3), 6);
+            this.bd.AnadirVenta(v);
+            v = new VentaTarjeta("YYYY", "1005", new Dependiente("102", "Pepe", "Pérez"));
+            AnadirLineaVenta(v, new Articulo("6", tipoIva.superReducido, 6),2);
+            this.bd.AnadirVenta(v);
+
+            /* this.bd.AnadirArticulo(new Articulo("1", tipoIva.normal, 1));
+             this.bd.AnadirArticulo(new Articulo("2", tipoIva.normal, 10));
+             this.bd.AnadirArticulo(new Articulo("3", tipoIva.normal, 15));
+             this.bd.AnadirArticulo(new Articulo("4", tipoIva.reducido, 2));
+             this.bd.AnadirArticulo(new Articulo("5", tipoIva.reducido, 3));
+             this.bd.AnadirArticulo(new Articulo("6", tipoIva.superReducido, 6));
+             this.bd.AnadirArticulo(new Articulo("7", tipoIva.superReducido, 2));
+             this.bd.AnadirDependiente(new Dependiente("101", "Manuel", "Rodríguez"));
+             this.bd.AnadirDependiente(new Dependiente("102", "Pepe", "Pérez"));
+             this.bd.AnadirDependiente(new Dependiente("103", "Alex", "Martínez"));
+             this.bd.AnadirDependiente(new Dependiente("104", "David", "Madorrán"));
+             this.bd.AnadirDependiente(new Dependiente("105", "Rodrigo", "Ortega"));
+             this.bd.AnadirDependiente(new Dependiente("106", "Oscar", "Ramírez"));
+             */
         }
 
         public bool DarAltaVenta(Venta pVenta)//la venta parametro no debe estar previamente en nuestra bd.

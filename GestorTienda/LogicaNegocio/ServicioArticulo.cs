@@ -14,6 +14,14 @@ namespace LogicaNegocio
         public ServicioArticulo()//el constructor crea una conexion con la base de datos.
         {
             this.bd = BDArticulo.GetInstance();
+            this.bd.AnadirArticulo(new Articulo("1", tipoIva.normal, 1));
+            this.bd.AnadirArticulo(new Articulo("2", tipoIva.normal, 10));
+            this.bd.AnadirArticulo(new Articulo("3", tipoIva.normal, 15));
+            this.bd.AnadirArticulo(new Articulo("4", tipoIva.reducido, 2));
+            this.bd.AnadirArticulo(new Articulo("5", tipoIva.reducido, 3));
+            this.bd.AnadirArticulo(new Articulo("6", tipoIva.superReducido, 6));
+            this.bd.AnadirArticulo(new Articulo("7", tipoIva.superReducido, 2));
+
         }
         public Articulo ObtenerInfoArticulo(Articulo pArticulo)//el articulo pasado como parametro es un envoltorio para el codigo(lo unico que nos interesa). como precondicion el codigo de dicho articulo debe existir en la base de datos.
         {

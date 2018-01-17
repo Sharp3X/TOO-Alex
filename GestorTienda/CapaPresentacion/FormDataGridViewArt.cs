@@ -11,18 +11,18 @@ using Modelo_de_dominio;
 
 namespace CapaPresentacion
 {
-    public partial class FormDataGridView : Form
+    public partial class FormDataGridViewArt : Form
     {
         private List<Articulo> listado;
 
 
 
-        public FormDataGridView()
+        public FormDataGridViewArt()
         {
             InitializeComponent();
         }
 
-        public FormDataGridView(List<Articulo> la)
+        public FormDataGridViewArt(List<Articulo> la)
         {
             InitializeComponent();
             this.listado = la;

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBásicoArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBásicoArticulo.Designer.cs">
+      <DependentUpon>FormBásicoArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAniadirLinea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +76,17 @@
     <Compile Include="FormBúsqueda2.Designer.cs">
       <DependentUpon>FormBúsqueda2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDataGridView.cs">
+    <Compile Include="FormDataGridViewArt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDataGridView.Designer.cs">
-      <DependentUpon>FormDataGridView.cs</DependentUpon>
+    <Compile Include="FormDataGridViewArt.Designer.cs">
+      <DependentUpon>FormDataGridViewArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataGridViewVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataGridViewVenta.Designer.cs">
+      <DependentUpon>FormDataGridViewVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FormIntroducir.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,12 @@
     <Compile Include="FormUnoaUnoV.Designer.cs">
       <DependentUpon>FormUnoaUnoV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVentaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentaArticulo.Designer.cs">
+      <DependentUpon>FormVentaArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +144,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBásicoArticulo.resx">
+      <DependentUpon>FormBásicoArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAniadirLinea.resx">
       <DependentUpon>FormAniadirLinea.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,8 +159,11 @@
     <EmbeddedResource Include="FormBúsqueda2.resx">
       <DependentUpon>FormBúsqueda2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDataGridView.resx">
-      <DependentUpon>FormDataGridView.cs</DependentUpon>
+    <EmbeddedResource Include="FormDataGridViewArt.resx">
+      <DependentUpon>FormDataGridViewArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataGridViewVenta.resx">
+      <DependentUpon>FormDataGridViewVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIntroducir.resx">
       <DependentUpon>FormIntroducir.cs</DependentUpon>
@@ -161,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUnoaUnoV.resx">
       <DependentUpon>FormUnoaUnoV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentaArticulo.resx">
+      <DependentUpon>FormVentaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>

@@ -82,9 +82,9 @@ namespace Modelo_de_dominio
             }
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return ("codigo: " + this.Codigo + " Dependiente(  " + this.Dependiente.ToString() + ") Fecha: " + this.FechaVenta + " lineas: " + this.Lineas.ToString());
+            return ("codigo: " + this.Codigo + " Dependiente(  " + this.Dependiente.NSS + ") Fecha: " + this.FechaVenta + " lineas: " + this.Lineas.ToString());
         }
 
         public bool Equals(Venta other)
